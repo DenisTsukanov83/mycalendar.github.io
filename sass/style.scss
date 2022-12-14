@@ -1,0 +1,179 @@
+body {
+    user-select: none;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    padding-top: 50px;
+    width: 100%;
+}
+.title {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 48px;
+}
+.title-year {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}
+.title-month {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 32px;
+}
+.main {
+    width: 100%;
+    margin-top: 40px;
+}
+.slider {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    color: green;
+    background-color: rgba(0, 0, 0, 0.0);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 64px;
+    cursor: pointer;
+}
+.btn:hover {
+    color: rgb(12, 240, 12);
+    transition: 0.3s;
+}
+.calendar {
+    position: relative;
+    width: 710px;
+    height: 370px;
+    border: 5px solid green;
+    overflow: hidden;
+}
+.page {
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6,60px);
+}
+.page-last {
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6,60px);
+    left: -705px;
+    z-index: -1;
+}
+.page-next {
+    position: absolute;
+    width: 100%;
+    height: 360px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    grid-template-rows: repeat(6,60px);
+    left: 705px;
+    z-index: -1;
+}
+.title-days {
+    width: 710px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    border: 5px solid green;
+}
+.title-day {
+    width: 100px;
+    height: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+}
+.day {
+    width: 100px;
+    height: 60px;
+    border: 3px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    background: white;
+}
+.day:hover {
+
+    width: 120px;
+    height: 72px;
+    transition: 0.5s;
+    z-index: 5;
+    transform: translate3d(-10px, -6px, 0);
+
+
+    
+}
+.day_last {
+    background: grey;
+}
+.day_next {
+    background: grey;
+}
+.from-left {
+    animation-name: from-left;
+    animation-duration: 1s;
+}
+.to-right {
+    animation-name: to-right;
+    animation-duration: 1s;
+}
+.to-left {
+    animation-name: to-left;
+    animation-duration: 1s;
+}
+.from-right {
+    animation-name: from-right;
+    animation-duration: 1s;
+}
+@keyframes from-left {
+    0% {
+        left: -705px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+@keyframes to-right {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: 705px;
+    }
+}
+@keyframes to-left {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -705px;
+    }
+}
+@keyframes from-right {
+    0% {
+        left: 705px;
+    }
+    100% {
+        left: 0px;
+    }
+}
