@@ -1,4 +1,3 @@
 # mycalendar.github.io
 
-
-https://github.com/DenisTsukanov83/mycalendar.github.io
+https://DenisTsukanov83.github.io/mycalendar
